@@ -1,0 +1,733 @@
+<!DOCTYPE html> 
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilia - Elegant Photography Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' id='bootstrap-css' href='css/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+    <!-- Font Awesome Icons CSS -->
+    <link rel='stylesheet' id='font-awesome' href='css/fontawesome/css/font-awesome.min.css' type='text/css' media='all' />
+    <!-- Main CSS File -->
+    <link rel='stylesheet' id='tilia-style-css' href='style.css' type='text/css' media='all' />
+    <!-- favicons -->
+    <link rel="icon" href="images/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="images/icons/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="images/icons/favicon-180x180.png" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="home">
+    <!-- HEADER -->
+     <style>
+        .menu-nav {
+    gap: 20px;
+}
+
+.menu-nav li {
+    list-style: none;
+}
+
+.menu-nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+.header-social i {
+    font-size: 23px;
+}
+
+.header-social i:hover {
+    font-size: 27px;
+}
+
+/* Optional: Make sure items don't wrap on larger screens */
+@media (min-width: 992px) {
+    .main-header .container > div {
+        flex-wrap: nowrap;
+    }
+}
+.main-header .container > div {
+    margin-top: 30px; /* or more, like 30px if needed */
+    padding-top: 10px;
+}
+
+    </style>
+    <header class="main-header header-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3 flex-wrap">
+                <!-- Social Icons (Left) -->
+                <div class="header-social social-media d-flex align-items-center">
+                    <a href="https://www.facebook.com/profile.php?id=61574601167923" target="_blank" class="text-white me-3"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/photographers_in_banglore/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+    
+                <!-- Navigation Menu (Center) -->
+                <nav class="nav-holder nav-holder-5">
+                    <ul class="menu-nav d-flex justify-content-center align-items-center mb-0">
+                        <li class="menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="portfolio-grid-v1-3-cols.html">Portfolio</a></li>
+                        <li class="menu-item"><a href="gallery-grid-3-cols.html">Services</a></li>
+                        <li class="menu-item"><a href="pricing-plans.html">Pricing Plans</a></li>
+                        <li class="menu-item"><a href="blog.html">Blog</a></li>
+                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+    
+                <!-- Logo (Right) -->
+                <div class="logo logo-5 logo-white">
+                    <a href="index.html">
+                        <img class="img-fluid" src="image/LoGolatest.png" alt="PIB Logo" style="width: 140px; height: 75px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <!-- /HEADER -->
+</body>
+</html>
+<style>
+	/* Positioning and styling the button */
+	.nav-toggle {
+		position: fixed;        /* or absolute if within a relatively positioned parent */
+		top: 10px;
+		right: 20px;
+		z-index: 1000;
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+	}
+	
+	/* Styling for the hamburger lines */
+	.hamburger-icon {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 30px;
+		height: 25px;
+	}
+	
+	.hamburger-icon .line {
+		height: 4px;
+		background-color: #fff;
+		border-radius: 2px;
+		transition: all 0.3s ease;
+	}
+	</style>
+	
+	<!-- Hamburger Button -->
+	<button class="nav-toggle d-md-none" aria-label="Toggle menu">
+		<div class="hamburger-icon">
+			<span class="line"></span>
+			<span class="line"></span>
+			<span class="line"></span>
+		</div>
+	</button>
+
+
+
+
+<!-- Mobile Nav -->
+<div class="mobile-menu d-md-none" style="display: none; background: #111; color: white; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999;">
+<div class="container py-4">
+<button class="close-mobile text-white mb-4" style="font-size: 48px; position: absolute; top: 20px; right: 20px;">
+<i class="fas fa-times"></i>
+</button>
+<ul class="list-unstyled">
+<li><a href="index.html" class="text-white d-block py-2">Home</a></li>
+<li><a href="portfolio-grid-v1-3-cols.html" class="text-white d-block py-2">Portfolio</a></li>
+<li><a href="gallery-grid-3-cols.html" class="text-white d-block py-2">Services</a></li>
+<li><a href="pricing-plans.html" class="text-white d-block py-2">Pricing Plans</a></li>
+<li><a href="blog.html" class="text-white d-block py-2">Blog</a></li>
+<li><a href="contact.html" class="text-white d-block py-2">Contact</a></li>
+</ul>
+</div>
+</div>
+
+<!-- JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const navToggle = document.querySelector(".nav-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeBtn = document.querySelector(".close-mobile");
+
+navToggle.addEventListener("click", () => {
+mobileMenu.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+mobileMenu.style.display = "none";
+});
+
+// Auto close menu when link clicked
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+link.addEventListener("click", () => {
+mobileMenu.style.display = "none";
+});
+});
+});
+</script>
+		<!-- /HEADER -->
+		<!-- TOP HEADER IMAGE -->
+		<div class="top-single-bkg top-single-gallery">
+			<div class="topsingleimg"> <img src="image/DSC02128.jpg" alt="" width="1920" height="1080"></div>
+			<div class="inner-desc">
+				<div class="container">
+					<h1 class="display-2 single-post-title">Pricing Plans</h1>
+					<span class="post-subtitle">What we offer</span>
+				</div>
+			</div>
+		</div>
+
+
+  
+
+	<!-- /TOP HEADER IMAGE -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+	<style>
+	.custom-slider-section {
+font-family: italic, sans-serif;
+background-color: #fff;
+color: #000;
+text-align: center;
+margin: 0;
+padding: 0;
+position: relative;
+}
+
+.custom-slider-section h1 {
+text-align: center;
+padding: 30px 10px;
+font-size: 28px;
+}
+
+.custom-slider-section .slider-container {
+position: relative;
+width: 100%;
+overflow: hidden;
+padding: 20px 50px;
+}
+
+.custom-slider-section .packages-row {
+display: flex;
+transition: all 0.5s ease;
+scroll-behavior: smooth;
+gap: 30px;
+overflow-x: auto;
+scrollbar-width: none;
+padding-left: 60px;
+}
+
+.custom-slider-section .packages-row::-webkit-scrollbar {
+display: none;
+}
+
+.custom-slider-section .package-box {
+flex: 0 0 auto;
+width: 300px;
+background: whitesmoke;
+border: 2px solid black;
+border-radius: 4px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+padding: 25px 20px;
+}
+
+.custom-slider-section .package-box h3 {
+font-size: 20px;
+background-color: #000;
+color: white;
+padding: 10px;
+border-radius: 6px;
+margin: 0;
+}
+
+.custom-slider-section .package-box:nth-child(2) h3,
+.custom-slider-section .package-box:nth-child(3) h3,
+.custom-slider-section .package-box:nth-child(4) h3,
+.custom-slider-section .package-box:nth-child(5) h3,
+.custom-slider-section .package-box:nth-child(6) h3 {
+background-color: #000;
+}
+
+.custom-slider-section .package-box:nth-child(3),
+.custom-slider-section .package-box:nth-child(4),
+.custom-slider-section .package-box:nth-child(5) {
+margin-left: 20px;
+}
+
+.custom-slider-section .package-box ul {
+list-style: none;
+padding: 0;
+margin-top: 20px;
+text-align: left;
+}
+
+.custom-slider-section .package-box ul li {
+position: relative;
+padding-left: 25px;
+margin-bottom: 10px;
+font-size: 15px;
+}
+
+.custom-slider-section .package-box ul li i {
+position: absolute;
+left: 0;
+color: #28a745;
+top: 2px;
+}
+
+.custom-slider-section .quote-btn {
+margin-top: 20px;
+padding: 10px 20px;
+border: none;
+background: #000;
+color: #fff;
+font-size: 14px;
+border-radius: 20px;
+cursor: pointer;
+}
+
+.custom-slider-section .quote-btn:hover {
+background: #000;
+}
+
+.custom-slider-section .limited-offer {
+font-size: 12px;
+color: #777;
+margin-top: 10px;
+}
+
+.custom-slider-section .nav-btn {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: rgba(0, 0, 0, 0.6);
+color: white;
+border: none;
+font-size: 24px;
+cursor: pointer;
+padding: 10px 15px;
+z-index: 2;
+border-radius: 5px;
+}
+
+.custom-slider-section .nav-btn:hover {
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+.custom-slider-section .nav-left {
+left: 10px;
+}
+
+.custom-slider-section .nav-right {
+right: 10px;
+}
+
+@media (max-width: 768px) {
+.custom-slider-section .slider-container {
+padding: 10px;
+}
+}
+
+</style>
+		
+<div class="custom-slider-section">
+	<h1>Event Photography Packages</h1>
+	<div class="slider-container">
+	  <button class="nav-btn nav-left" onclick="scrollLeft()">&#10094;</button>
+	  <div class="packages-row" id="slider">
+
+		<div class="package-box">
+		  <h3>Low Budget Event<br><small>Package Code - E01</small></h3>
+		  <ul>
+			<li><i class="fas fa-check-circle"></i>  One Semi Professional Photographer</li>
+			<li><i class="fas fa-check-circle"></i>Mid-range DSLR Camera</li>
+			<li><i class="fas fa-check-circle"></i> Flash On Camera</li>
+		 
+			<li><i class="fas fa-check-circle"></i> Unlimited Clicks</li>
+			<li><i class="fas fa-check-circle"></i>  Digitally processed(edited) Photos</li>
+			<li><i class="fas fa-check-circle"></i>Processed Photos  Delivered In 7 Days</li>
+			<li><i class="fas fa-check-circle"></i> Add On 1: Videographer| Cinematographer</li>
+			<li><i class="fas fa-check-circle"></i> Add On 2: Drone</li>
+		  </ul>
+		  <button class="quote-btn">Get A Quote</button>
+		  <div class="limited-offer">Limited Period Offer</div>
+		</div>
+		  
+		<div class="package-box">
+		  <h3>Budget Event<br><small>Package Code - E02</small></h3>
+		  <ul>
+			<li><i class="fas fa-check-circle"></i>  One Professional Photographer</li>
+			<li><i class="fas fa-check-circle"></i> Full Frame DSLR</li>
+			<li><i class="fas fa-check-circle"></i> Flash On Camera</li>
+			
+			<li><i class="fas fa-check-circle"></i> Unlimited Clicks</li>
+			<li><i class="fas fa-check-circle"></i> Digitally processed(edited) Photos</li>
+			<li><i class="fas fa-check-circle"></i> Processed Photos Delivered In 7 Days</li>
+		   
+			<li><i class="fas fa-check-circle"></i> Add On 1: Videographer| Cinematographer</li>
+			<li><i class="fas fa-check-circle"></i> Add On 2: Drone</li>
+		  </ul>
+		  <button class="quote-btn">Get A Quote</button>
+		  <div class="limited-offer">Limited Period Offer</div>
+		</div>
+		<!-- Package E03 -->
+		<div class="package-box">
+		  <h3>Standard Event<br><small>Package Code - E03</small></h3>
+		  <ul>
+			<li><i class="fas fa-check-circle"></i> One Professional Photographer</li>
+			<li><i class="fas fa-check-circle"></i> Full Frame DSLR Camera</li>
+			<li><i class="fas fa-check-circle"></i> Flash On Camera</li>
+			<li><i class="fas fa-check-circle"></i> Two Umbrella Lighting</li>
+			<li><i class="fas fa-check-circle"></i> Unlimited Clicks</li>
+			<li><i class="fas fa-check-circle"></i> Digitally Processed(Edited) Photos</li>
+			<li><i class="fas fa-check-circle"></i> Delivered In 7 Days</li>
+			<li><i class="fas fa-check-circle"></i> Add On 1: Videographer</li>
+			<li><i class="fas fa-check-circle"></i> Add On 2: Drone</li>
+		  </ul>
+		  <button class="quote-btn">Get A Quote</button>
+		  <div class="limited-offer">Limited Period Offer</div>
+		</div>
+  
+		<!-- Package E04 -->
+		<div class="package-box">
+		  <h3>Premium Event<br><small>Package Code - E04</small></h3>
+		  <ul>
+			<li><i class="fas fa-check-circle"></i> Highly Professional Photographer</li>
+			<li><i class="fas fa-check-circle"></i> Full Frame Mirrorless Camera</li>
+			<li><i class="fas fa-check-circle"></i> Flash On Camera</li>
+			<li><i class="fas fa-check-circle"></i> Two Umbrella Lighting</li>
+			<li><i class="fas fa-check-circle"></i> Unlimited Clicks</li>
+			<li><i class="fas fa-check-circle"></i> Digitally Edited Photos</li>
+			<li><i class="fas fa-check-circle"></i> Delivered In 7 Days</li>
+			<li><i class="fas fa-check-circle"></i> Add On 1: Videographer</li>
+			<li><i class="fas fa-check-circle"></i> Add On 2: Drone</li>
+		  </ul>
+		  <button class="quote-btn">Get A Quote</button>
+		  <div class="limited-offer">Limited Period Offer</div>
+		</div>
+  
+		<!-- Package E05 -->
+		<div class="package-box">
+		  <h3>Event Videography<br><small>Package Code - E05</small></h3>
+		  <ul>
+			<li><i class="fas fa-check-circle"></i> Professional Videographer</li>
+			<li><i class="fas fa-check-circle"></i> Full HD Camera</li>
+			<li><i class="fas fa-check-circle"></i> Fluid Head Tripod</li>
+			<li><i class="fas fa-check-circle"></i> Video Lighting</li>
+			<li><i class="fas fa-check-circle"></i> Full Coverage</li>
+			<li><i class="fas fa-check-circle"></i> Edited HD Video</li>
+			<li><i class="fas fa-check-circle"></i> Delivery In 10 Days</li>
+			<li><i class="fas fa-check-circle"></i> Add On: Drone</li>
+		  </ul>
+		  <button class="quote-btn">Get A Quote</button>
+		  <div class="limited-offer">Limited Period Offer</div>
+		</div>
+  
+		<!-- Package E06 -->
+		<div class="package-box">
+		  <h3>Cinematography<br><small>Package Code - E06</small></h3>
+		  <ul>
+			<li><i class="fas fa-check-circle"></i> Cinematographer</li>
+			<li><i class="fas fa-check-circle"></i> Full Frame DSLR/Mirrorless</li>
+			<li><i class="fas fa-check-circle"></i> Stabilizer Crane</li>
+			<li><i class="fas fa-check-circle"></i> Lavalier Mic</li>
+			<li><i class="fas fa-check-circle"></i> Cinematic Video</li>
+			<li><i class="fas fa-check-circle"></i> Lighting Setup</li>
+			<li><i class="fas fa-check-circle"></i> Delivery In 15 Days</li>
+			<li><i class="fas fa-check-circle"></i> Add On: Drone</li>
+		  </ul>
+		  <button class="quote-btn">Get A Quote</button>
+		  <div class="limited-offer">Limited Period Offer</div>
+		</div>
+	  </div>
+	  <button class="nav-btn nav-right" onclick="scrollRight()">&#10095;</button>
+	</div>
+
+  
+	  
+  
+	<script>
+		function getBoxWidth(sliderId) {
+		  const box = document.querySelector(`#${sliderId} .package-box`);
+		  const style = window.getComputedStyle(box);
+		  const margin = parseInt(style.marginRight) || 30;
+		  return box.offsetWidth + margin;
+		}
+	  
+		function scrollLeft(sliderId) {
+		  const slider = document.getElementById(sliderId);
+		  slider.scrollBy({ left: -getBoxWidth(sliderId), behavior: 'smooth' });
+		}
+	  
+		function scrollRight(sliderId) {
+		  const slider = document.getElementById(sliderId);
+		  slider.scrollBy({ left: getBoxWidth(sliderId), behavior: 'smooth' });
+		}
+	  </script>
+	  
+ 
+  <h1>Wedding Photography Packages</h1>
+	<div class="slider-container">
+	
+	  <div class="packages-row" id="slider">
+
+		  
+		<!-- Package E03 -->
+		<div class="package-box">
+		  <h3>Low budget Wedding
+			  <br><small>Package Code - W01</small></h3>
+		  <ul>
+			<li><i class="fas fa-check-circle"></i> One Professional Photographer
+			<li><i class="fas fa-check-circle"></i>Full Frame DSLR /Mirrorless Camera</li>
+			<li><i class="fas fa-check-circle"></i> Flash On Camera</li>
+			<li><i class="fas fa-check-circle"></i> Two Umbrella Lighting</li>
+			<li><i class="fas fa-check-circle"></i> Unlimited Clicks</li>
+			<li><i class="fas fa-check-circle"></i> Processed Photos Delivery in 10 days</li>
+			<li><i class="fas fa-check-circle"></i> Add On: Album | Drone</li>
+		  </ul>
+		  <button class="quote-btn">Get A Quote</button>
+		  <div class="limited-offer">Limited Period Offer</div>
+		</div>
+  
+		<!-- Package E04 -->
+		<div class="package-box">
+		  <h3>Budget Wedding<br><small>Package Code - W02</small></h3>
+		  <ul>
+			<li><i class="fas fa-check-circle"></i>  One Professional Photographer
+			<li><i class="fas fa-check-circle"></i> Full Frame DSLR /Mirrorless Camera</li>
+			<li><i class="fas fa-check-circle"></i> Flash On Camera</li>
+			<li><i class="fas fa-check-circle"></i> Two Umbrella Lighting</li>
+			<li><i class="fas fa-check-circle"></i> Digitally processed(edited) Photos</li>
+			<li><i class="fas fa-check-circle"></i> Processed Photos Delivered in 10 days</li>
+			<li><i class="fas fa-check-circle"></i> Add On: Album | Drone</li>
+   
+		  </ul>
+		  <button class="quote-btn">Get A Quote</button>
+		  <div class="limited-offer">Limited Period Offer</div>
+		</div>
+  
+		<!-- Package E05 -->
+		<div class="package-box">
+		  <h3>Standard Wedding <br><small>Package Code - W03</small></h3>
+		  <ul>
+			<li><i class="fas fa-check-circle"></i> One Professional Photographer
+			<li><i class="fas fa-check-circle"></i> One Professional Videographer</li>
+			<li><i class="fas fa-check-circle"></i>Full Frame DSLR + Full HD Video Camera</li>
+			<li><i class="fas fa-check-circle"></i>Flash On Camera</li>
+			<li><i class="fas fa-check-circle"></i> Two Umbrella Lighting</li>
+			<li><i class="fas fa-check-circle"></i>  Unlimited Clicks</li>
+			<li><i class="fas fa-check-circle"></i> Digitally Processed(Edited) Photos</li>
+			<li><i class="fas fa-check-circle"></i>   Edited Full HD Video</li>
+			<li><i class="fas fa-check-circle"></i> Delivery In 15 Days</li>
+			<li><i class="fas fa-check-circle"></i>   Add On 1: Candid Photographer</li>
+			<li><i class="fas fa-check-circle"></i>   Add On 2: Drone | Album</li>
+		  </ul>
+		  <button class="quote-btn">Get A Quote</button>
+		  <div class="limited-offer">Limited Period Offer</div>
+		</div>
+  
+		<!-- Package E06 -->
+		<div class="package-box">
+		  <h3>Premium Wedding
+			
+		   <br><small>  Package Code - W04</small></h3>
+		  <ul>
+			<li><i class="fas fa-check-circle"></i> One Professional Photographer
+			 </li>
+			<li><i class="fas fa-check-circle"></i>  One Professional Videographer</li>
+			<li><i class="fas fa-check-circle"></i>  One Professional Cinematographer</li>
+			<li><i class="fas fa-check-circle"></i> Full Frame DSLR + Full HD Video Camera</li>
+			<li><i class="fas fa-check-circle"></i>  Zhiyun Crane 3 LAB 3-Axis Camera Stabilizer​</li>
+			<li><i class="fas fa-check-circle"></i>  Flash On Camera</li>
+			<li><i class="fas fa-check-circle"></i>  Two Umbrella Lighting</li>
+			<li><i class="fas fa-check-circle"></i>  Digitally Processed(Edited) Photos</li>
+			<li><i class="fas fa-check-circle"></i>  Edited Full HD Video</li>
+			<li><i class="fas fa-check-circle"></i>  Edited Full HD Cinematic Video</li>
+			<li><i class="fas fa-check-circle"></i>  Delivery In 15 Days</li>
+			<li><i class="fas fa-check-circle"></i>   Add On 1: Candid Photographer</li>
+			<li><i class="fas fa-check-circle"></i>   Add On 2: Drone | Album</li>
+		  </ul>
+		  <button class="quote-btn">Get A Quote</button>
+		  <div class="limited-offer">Limited Period Offer</div>
+		</div>
+	</div>
+  
+
+
+
+
+	  <h1>Portfolio & Portrait</h1>
+		<div class="slider-container">
+		
+		  <div class="packages-row" id="slider">
+  
+			  
+			<!-- Package E03 -->
+			<div class="package-box">
+			  <h3>Portfolio Budget
+				 <br><small> Package Code - P01</small></h3>
+			  <ul>
+				<li><i class="fas fa-check-circle"></i> One Professional Photographer</li>
+				<li><i class="fas fa-check-circle"></i> Full Frame DSLR/ Mirrorless Camera</li>
+				<li><i class="fas fa-check-circle"></i> Flash On Camera</li>
+				
+				<li><i class="fas fa-check-circle"></i> Unlimited Clicks</li>
+				<li><i class="fas fa-check-circle"></i>40+ Digitally Processed(Edited) Photos</li>
+				<li><i class="fas fa-check-circle"></i> Delivered In 15 Days</li>
+				<li><i class="fas fa-check-circle"></i> Add On 2: Photography Prop's</li>
+				<li><i class="fas fa-check-circle"></i> Add On 1 : Album</li>
+			  </ul>
+			  <button class="quote-btn">Get A Quote</button>
+			  <div class="limited-offer">Limited Period Offer</div>
+			</div>
+	  
+			<!-- Package E04 -->
+			<div class="package-box">
+			  <h3>Portfolio standard
+				  <br><small>Package Code - P02</small></h3>
+			  <ul>
+				<li><i class="fas fa-check-circle"></i> One Professional Photographer</li>
+				<li><i class="fas fa-check-circle"></i> Full Frame DSLR/ Mirrorless Camera</li>
+				<li><i class="fas fa-check-circle"></i> Flash On Camera</li>
+				<li><i class="fas fa-check-circle"></i>  Soft box Lighting setup</li>
+				<li><i class="fas fa-check-circle"></i> Unlimited Clicks</li>
+				<li><i class="fas fa-check-circle"></i>  40+ Digitally Processed(Edited) Photos</li>
+				<li><i class="fas fa-check-circle"></i> Delivered In 15 Days</li>
+				<li><i class="fas fa-check-circle"></i> Add On 2: Photography Prop's</li>
+				<li><i class="fas fa-check-circle"></i> Add On 1 : Album</li>
+			  </ul>
+			  <button class="quote-btn">Get A Quote</button>
+			  <div class="limited-offer">Limited Period Offer</div>
+			</div>
+	  
+			<!-- Package E05 -->
+			<div class="package-box">
+			  <h3>Portfolio Premium
+				  <br><small>Package Code - P03</small></h3>
+			  <ul>
+				  <li><i class="fas fa-check-circle"></i> One Professional Cinematographer</li> 
+				<li><i class="fas fa-check-circle"></i> One Professional Videographer</li>
+				<li><i class="fas fa-check-circle"></i>  Zhiyun Crane 3 LAB 3-Axis Camera Stabilizer​</li>
+				<li><i class="fas fa-check-circle"></i>  Full Frame DSLR / Mirrorless Camera</li>
+				<li><i class="fas fa-check-circle"></i>Flash On Camera</li>
+				<li><i class="fas fa-check-circle"></i>    Edited Full HD Cinematic Video</li>
+				<li><i class="fas fa-check-circle"></i> Unlimited Clicks</li>
+				<li><i class="fas fa-check-circle"></i>  40+ Digitally Processed(Edited) Photos</li>
+				<li><i class="fas fa-check-circle"></i> Delivered In 15 Days</li>
+				<li><i class="fas fa-check-circle"></i> Add On 2: Photography Prop's</li>
+				<li><i class="fas fa-check-circle"></i> Add On 1 : Album</li>
+			  </ul>
+			  <button class="quote-btn">Get A Quote</button>
+			  <div class="limited-offer">Limited Period Offer</div>
+			</div>
+		</div>  
+	<!-- /WRAP CONTENT -->
+		
+
+
+    <!-- FOOTER -->
+		
+		<footer>
+			<div class="container">
+				<div class="footer-widgets">
+					<div class="row">
+						<div class="col-lg-3 col-sm-6">
+							<div class="foo-block">
+								<div class="widget_text widget widget-footer">
+									<h5 class="widgettitle">About Us</h5>
+									<div class="textwidget">
+										<p>Welcome to Photography in Bangalore, your one-stop destination for professional photoshoots and videography services. We specialize in bringing your visions to life through stunning imagery, whether it’s a model photoshoot, wedding, pre-wedding, corporate event, or brand shoot.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /col-lg-3 -->
+						<div class="col-lg-3 col-sm-6">
+							<div class="foo-block">
+								<div class="widget_text widget widget-footer">
+									<h5 class="widgettitle">Contact Us</h5>
+									<ul class="footer-contact">
+										<li><i class="fas fa-map-marker-alt"></i><span>#76 / 6, Chada Arcade, Sanjay Nagar Main Rd, Above Union Bank, Bengaluru, Karnataka 560094</span></li>
+										<li><i class="fas fa-mobile-alt"></i><span>(+91) 855 300 9696</span></li>
+										<li><i class="fas fa-mobile-alt"></i><span>(+91) 888 400 5400</span></li>
+										<li><i class="far fa-envelope"></i><span>careers@brightads.in</span></li>
+										<li><i class="far fa-envelope"></i><span>support@brightads.in
+										</span></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- /col-lg-3 -->
+						<div class="col-lg-3 col-sm-6">
+							<div class="foo-block">
+								<div class="widget_text widget widget-footer">
+									<h5 class="widgettitle">Quick Links</h5>
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about-us-2.html">About</a></li>
+										<li><a href="portfolio-grid-v1-3-cols.html">Portfolio</a></li>
+										<li><a href="contact.html">Contact</a></li>
+										<li><a href="contact.html">Privacy Policy</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<div class="foo-block foo-last">
+								<div class="widget widget-footer">
+									<h5 class="widgettitle">Follow</h5>
+									<ul>
+										<li><a href="https://www.facebook.com/profile.php?id=61574601167923"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+										<li><a href="https://www.instagram.com/photographers_in_bangalore/"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="copyright">
+					<div class="footer-copy"> <span class="footer-year">2025</span> &copy; Photographers In Banglore.</div>
+				</div>
+			</div>
+		</footer>
+		<!-- /FOOTER -->
+		<div class="scrollup">
+			<a class="scrolltop" href="#">
+			<i class="fa fa-chevron-up"></i>
+			</a>
+		</div>
+    <!-- JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navToggle = document.querySelector(".nav-toggle");
+            const mobileMenu = document.querySelector(".mobile-menu");
+            const closeBtn = document.querySelector(".close-mobile");
+
+            navToggle.addEventListener("click", () => {
+                mobileMenu.style.display = "block";
+            });
+
+            closeBtn.addEventListener("click", () => {
+                mobileMenu.style.display = "none";
+            });
+
+            document.querySelectorAll(".mobile-menu a").forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.style.display = "none";
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html> 
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilia - Elegant Photography Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' id='bootstrap-css' href='css/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+    <!-- Font Awesome Icons CSS -->
+    <link rel='stylesheet' id='font-awesome' href='css/fontawesome/css/font-awesome.min.css' type='text/css' media='all' />
+    <!-- Main CSS File -->
+    <link rel='stylesheet' id='tilia-style-css' href='style.css' type='text/css' media='all' />
+    <!-- favicons -->
+    <link rel="icon" href="images/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="images/icons/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="images/icons/favicon-180x180.png" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="home">
+    <!-- HEADER -->
+     <style>
+        .menu-nav {
+    gap: 20px;
+}
+
+.menu-nav li {
+    list-style: none;
+}
+
+.menu-nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+.header-social i {
+    font-size: 23px;
+}
+
+.header-social i:hover {
+    font-size: 27px;
+}
+
+/* Optional: Make sure items don't wrap on larger screens */
+@media (min-width: 992px) {
+    .main-header .container > div {
+        flex-wrap: nowrap;
+    }
+}
+.main-header .container > div {
+    margin-top: 30px; /* or more, like 30px if needed */
+    padding-top: 10px;
+}
+
+    </style>
+    <header class="main-header header-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3 flex-wrap">
+                <!-- Social Icons (Left) -->
+                <div class="header-social social-media d-flex align-items-center">
+                    <a href="https://www.facebook.com/profile.php?id=61574601167923" target="_blank" class="text-white me-3"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/photographers_in_banglore/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+    
+                <!-- Navigation Menu (Center) -->
+                <nav class="nav-holder nav-holder-5">
+                    <ul class="menu-nav d-flex justify-content-center align-items-center mb-0">
+                        <li class="menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="portfolio-grid-v1-3-cols.html">Portfolio</a></li>
+                        <li class="menu-item"><a href="gallery-grid-3-cols.html">Services</a></li>
+                        <li class="menu-item"><a href="pricing-plans.html">Pricing Plans</a></li>
+                        <li class="menu-item"><a href="blog.html">Blog</a></li>
+                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+    
+                <!-- Logo (Right) -->
+                <div class="logo logo-5 logo-white">
+                    <a href="index.html">
+                        <img class="img-fluid" src="image/LoGolatest.png" alt="PIB Logo" style="width: 140px; height: 75px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <!-- /HEADER -->
+</body>
+</html>
+<style>
+	/* Positioning and styling the button */
+	.nav-toggle {
+		position: fixed;        /* or absolute if within a relatively positioned parent */
+		top: 10px;
+		right: 20px;
+		z-index: 1000;
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+	}
+	
+	/* Styling for the hamburger lines */
+	.hamburger-icon {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 30px;
+		height: 25px;
+	}
+	
+	.hamburger-icon .line {
+		height: 4px;
+		background-color: #fff;
+		border-radius: 2px;
+		transition: all 0.3s ease;
+	}
+	</style>
+	
+	<!-- Hamburger Button -->
+	<button class="nav-toggle d-md-none" aria-label="Toggle menu">
+		<div class="hamburger-icon">
+			<span class="line"></span>
+			<span class="line"></span>
+			<span class="line"></span>
+		</div>
+	</button>
+
+
+
+
+<!-- Mobile Nav -->
+<div class="mobile-menu d-md-none" style="display: none; background: #111; color: white; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999;">
+<div class="container py-4">
+<button class="close-mobile text-white mb-4" style="font-size: 48px; position: absolute; top: 20px; right: 20px;">
+<i class="fas fa-times"></i>
+</button>
+<ul class="list-unstyled">
+<li><a href="index.html" class="text-white d-block py-2">Home</a></li>
+<li><a href="portfolio-grid-v1-3-cols.html" class="text-white d-block py-2">Portfolio</a></li>
+<li><a href="gallery-grid-3-cols.html" class="text-white d-block py-2">Services</a></li>
+<li><a href="pricing-plans.html" class="text-white d-block py-2">Pricing Plans</a></li>
+<li><a href="blog.html" class="text-white d-block py-2">Blog</a></li>
+<li><a href="contact.html" class="text-white d-block py-2">Contact</a></li>
+</ul>
+</div>
+</div>
+
+<!-- JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const navToggle = document.querySelector(".nav-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeBtn = document.querySelector(".close-mobile");
+
+navToggle.addEventListener("click", () => {
+mobileMenu.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+mobileMenu.style.display = "none";
+});
+
+// Auto close menu when link clicked
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+link.addEventListener("click", () => {
+mobileMenu.style.display = "none";
+});
+});
+});
+</script>
+		<!-- /HEADER -->
+		<!-- /HEADER -->
+		<!-- TOP HEADER IMAGE -->
+		<div class="top-single-bkg topsinglepage">
+			<div class="topsingleimg"> <img src="image/DSC02121.jpg" alt="" width="1920" height="1080"></div>
+			<div class="inner-desc">
+				<div class="container">
+					<h1 class="display-2 single-post-title">Blog</h1>
+					<span class="post-subtitle">Latest News</span>
+				</div>
+			</div>
+		</div>
+		<!-- /TOP HEADER IMAGE -->
+			
+			<!-- BLOG SECTION START -->
+<section style="background-color: #fff; padding: 40px 0;">
+	<div class="container">
+	  <!-- Blog Item Start -->
+	  <div class="blog-card d-flex mb-5">
+		<div class="blog-image">
+		  <img src="image/BJP05942.jpeg" alt="Wedding" class="img-fluid rounded">
+		</div>
+		<div class="blog-content text-white">
+		  <p class="text-uppercase text-muted small mb-2">Wedding</p>
+		  <h3 class="fw-bold mb-3">Turn Every Wedding Moment into a Memory with Photographers in Bangalore</h3>
+		  <p class="text-muted">Weddings are some of life’s most treasured occasions, and having the right photographer can turn fleeting moments into lifelong memories...</p>
+		  <a href="#" class="btn btn-outline-dark mt-3" onclick="openBlogModal('blogModal2')">Read More</a>
+		</div>
+	  </div>
+	  <!-- Blog Item End -->
+
+	  <div id="blogModal2" class="blog-modal">
+		<div class="blog-modal-content dark-theme">
+		  <span class="close" onclick="closeBlogModal('blogModal2')">&times;</span>
+	  
+		  <p style="font-size: 14px"></p>
+		  <h2>Make Your Wedding Unforgettable by Capturing Every Precious Moment with Photographers in Bangalore</h2>
+	  
+		  <p>Weddings are some of life’s most treasured occasions, and having the right photographer can turn fleeting moments into lifelong memories. The best photographers in Bangalore don’t just take pictures — they tell your story through their lens, capturing every smile, tear, and joyful expression with professionalism and care.</p>
+	  
+		  <p>Whether you’re planning a grand celebration or an intimate gathering, professional event photography Bangalore experts adapt to your style and needs. Many couples also choose to celebrate their journey with a pre-wedding shoot — a creative way to capture the couple’s bond before the big day, often set against Bangalore’s beautiful backdrops.</p>
+	  
+		  <h3>Why Choosing the Right Photographer Makes All the Difference on Your Big Day</h3>
+		  <p>Your wedding day is filled with precious moments that pass in the blink of an eye — from nervous excitement to heartfelt emotions. Choosing the right photographer means trusting a professional who not only understands these moments but knows how to capture them beautifully. The best photographers in Bangalore blend seamlessly into your event, capturing natural, candid moments without interrupting the flow. Their technical skills, creativity, and cultural sensitivity ensure that every photo reflects the unique spirit of your celebration.</p>
+	  
+		  <h3>Types of Wedding Shoots</h3>
+		  <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+			<img src="image/a.png" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+			<div>
+		  <h4>1. Traditional South Indian Weddings</h4>
+		  <p>Rich in cultural rituals and vibrant ceremonies, these weddings require photographers who understand and respect every sacred moment. The best photographers in Bangalore specializing in traditional weddings capture the essence of time-honored customs with sensitivity and skill.</p>
+			</div></div>
+
+
+			<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+				<img src="image/a1.png" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+				<div>
+		  <h4>2. Contemporary Urban Weddings</h4>
+		  <p>These weddings blend modern style with personal touches, often held in chic venues around the city. The top wedding and event photographers Bangalore excel at capturing candid emotions and stylish portraits that tell your unique story.</p></div></div>
+	  
+		  <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+			<img src="image/a2.png" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+			<div>
+		  <h4>3. Destination Weddings</h4>
+		  <p>For couples looking to celebrate in exotic locations, experienced photographers travel and adapt to various settings, ensuring breathtaking images regardless of lighting or environment. The expertise of photographers in Bangalore who cover all events shines here.</p></div></div>
+	  
+		  <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+			<img src="image/a3.png" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+			<div>
+		  <h4>4. Pre-Wedding Shoots</h4>
+		  <p>More than just photos, pre-wedding shoots offer couples a chance to express their personalities and bond in relaxed settings. The best photographers in Bangalore create beautiful narratives that complement the main event, often set in scenic locations across the city.</p></div></div>
+	  
+		  <h3>Cherishing the Unique Bond Between the Groom and Bride</h3>
+		  <p>Every wedding is a journey of two hearts coming together, and photographers in Bangalore understand the importance of capturing those intimate moments between the bride and groom. From stolen glances to shared laughter, these images become treasured keepsakes that highlight the unique bond and love that define your special day.</p>
+	  
+		  <h3>Get in Touch with the Best Photographers in Bangalore</h3>
+		  <p>Ready to make your wedding unforgettable? Our team of expert photographers in Bangalore is here to capture every special moment with creativity and care. Whether it’s a grand celebration, an intimate gathering, or a pre-wedding shoot, we’re excited to bring your vision to life.</p>
+		  <p>Contact us today to discuss your event, check availability, or get a custom quote. Let’s create memories that last a lifetime!</p>
+		</div>
+	  </div>
+
+	  <style>
+		.blog-modal {
+		  display: none;
+		  position: fixed;
+		  z-index: 1001;
+		  left: 0;
+		  top: 0;
+		  width: 100%;
+		  height: 100%;
+		  overflow: auto;
+		  background-color: #fff;
+		}
+		
+		.blog-modal-content {
+		  background-color: #fff;
+		  margin: 5% auto;
+		  padding: 30px;
+		  border: 1px solid #fff;
+		  width: 90%;
+		  max-width: 900px;
+		  color: #000;
+		  font-family: 'Georgia', serif;
+		  line-height: 1.7;
+		  border-radius: 10px;
+		}
+		
+		.blog-modal-content h2, .blog-modal-content h3, .blog-modal-content h4 {
+		  color: #000;
+		}
+		
+		.blog-modal-content p {
+		  color: #000;
+		}
+		
+		.blog-modal .close {
+		  color: #000;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bold;
+		  cursor: pointer;
+		}
+		</style>
+
+<script>
+	function openBlogModal(id) {
+	  document.getElementById(id).style.display = 'block';
+	}
+	
+	function closeBlogModal(id) {
+	  document.getElementById(id).style.display = 'none';
+	}
+	</script>
+	
+
+
+
+
+<!-- 2> -->
+
+
+  
+	  <!-- Repeat for other blogs -->
+	  <div class="blog-card d-flex mb-5">
+		<div class="blog-image">
+		  <img src="image/DSC02545-118 (1) (2).jpg" alt="Corporate" class="img-fluid rounded">
+		</div>
+		<div class="blog-content text-white">
+		  <p class="text-uppercase text-muted small mb-2">Corporate</p>
+		  <h3 class="fw-bold mb-3">Showcase Your Brand with Professional Corporate Event Photography in Bangalore</h3>
+		  <p class="text-muted">In the world of business, every corporate event plays a crucial role in building your brand and connecting with your audience...</p>
+		  <a href="#" class="btn btn-outline-dark mt-3" onclick="openBlogModal('blogModal3')">Read More</a>
+		</div>
+	  </div>
+
+	  <div id="blogModal3" class="blog-modal">
+		<div class="blog-modal-content dark-theme">
+		  <span class="close" onclick="closeBlogModal('blogModal3')">&times;</span>
+	  
+		  <p style="font-size: 14px"></p>
+		  <h2>Elevate Your Corporate Events with Professional Photography by the Best Photographers in Bangalore</h2>
+	  
+		  <p>In the world of business, every corporate event — from conferences and product launches to team-building activities and award ceremonies — plays a crucial role in building your brand and connecting with your audience. Capturing these moments with the best photographers in Bangalore ensures that your event is remembered not just for its success, but also for its professionalism and energy.</p>
+	  
+		  <p>Professional event photography in Bangalore goes beyond simple snapshots; it creates a visual narrative of your brand’s story, showcasing your company culture, key moments, and the people who make your business thrive.</p>
+	  
+		  <h3>Why Professional Photography is Essential for Corporate Events		</h3>
+		  <p>Corporate events often involve intricate details — keynote speakers, networking sessions, branded setups, and candid interactions. Hiring the top corporate photographers in Bangalore means you get someone who understands the importance of these details and how to capture them in a way that aligns with your corporate identity.Expert photographers know how to work unobtrusively, ensuring they don’t disrupt the flow of your event while still capturing those key moments that highlight success, teamwork, and innovation.</p>
+	  
+		  <h3>Types of Corporate Photography Services</h3>
+		  <!-- Point 1 -->
+<!-- Point 1 -->
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+	<img src="image/senior-man-elegant-business-suit-sharing-his-business-experience-while-making-social-media-video (1).jpg" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+	<div>
+	  <h4>1. Conferences and Seminars</h4>
+	  <p>Capturing the energy and engagement of your attendees, speakers, and panel discussions, these photos help promote future events and showcase your company’s expertise.</p>
+	</div>
+  </div>
+  
+
+  <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+	<img src="image/young-lady-two-young-men-getting-their-picture-taken.jpg" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+	<div>
+		  <h4>2. Product Launches and Exhibitions</h4>
+		  <p>Highlighting your new products, displays, and audience reactions, professional photography helps build buzz and provides content for marketing and PR efforts.</p></div></div>
+	  
+
+		  <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+			<img src="image/DSC01991.jpg" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+			<div>
+		  <h4>3. Award Ceremonies and Gala Dinners</h4>
+		  <p>Documenting formal moments, celebratory speeches, and candid guest interactions, photographers create lasting memories of your company’s achievements and culture.</p></div></div>
+	  
+
+		  <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+			<img src="image/professional-young-photographer-taking-photos-indian-model-studio-with-leight.jpg" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+			<div>
+		  <h4>4. Team-building and Corporate Parties</h4>
+		  <p>From casual gatherings to themed parties, capturing the camaraderie and spirit of your team enhances your employer brand and boosts employee morale.</p></div></div>
+	  
+		  <h3>Making Every Detail Count	</h3>
+		  <p>The best photographers in Bangalore don’t just photograph people — they capture the atmosphere, branding elements, and the essence of your event. From the perfect lighting on the stage to the networking smiles, every shot contributes to telling the story of your corporate success.</p>
+	  
+		  <h3>Connect with Expert Corporate Photographers in Bangalore</h3>
+		  <p>Ready to showcase your corporate event in the best light? Our skilled photographers in Bangalore specialize in professional corporate event photography that highlights your company’s strengths and milestones.</p>
+		  <p>Contact us today to discuss your event, check availability, or get a tailored quote. Let us help you create powerful images that elevate your brand and resonate long after the event ends.</p>
+		</div>
+	  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+	  <div class="blog-card d-flex mb-5">
+		<div class="blog-image">
+		  <img src="image/1703768147184.JPG" alt="Birthday" class="img-fluid rounded">
+		</div>
+		<div class="blog-content text-white">
+		  <p class="text-uppercase text-muted small mb-2">Events</p>
+		  <h3 class="fw-bold mb-3">Make Every Birthday Unforgettable with Top Photographers in Bangalore</h3>
+		  <p class="text-muted">Birthdays are special milestones that deserve to be remembered forever...</p>
+		  <a href="#" class="btn btn-outline-dark mt-3" onclick="openBlogModal('blogModal4')">Read More</a>
+		</div>
+	  </div>
+
+	  <div id="blogModal4" class="blog-modal">
+		<div class="blog-modal-content dark-theme">
+		  <span class="close" onclick="closeBlogModal('blogModal4')">&times;</span>
+	  
+		  <p style="font-size: 14px"></p>
+		  <h2>Celebrate Every Birthday with Stunning Photography by the Best Photographers in Bangalore
+		</h2>
+	  
+		  <p>Birthdays are special milestones that deserve to be remembered forever. Whether it’s a child’s first birthday, a sweet sixteen, or a grand milestone celebration, capturing these joyful moments with the best photographers in Bangalore ensures your memories stay vibrant and alive for years to come.
+		</p>
+	  
+		  <p>From candid laughter to heartfelt cake-cutting moments, professional event photography Bangalore experts know how to capture the essence of your birthday celebration with creativity and care. Every event is unique, and the right photographer helps tell your story in a way that feels personal and timeless.</p>
+	  
+		  <h3>Why Professional Photography Elevates Your Birthday Celebration		</h3>
+		  <p>Birthdays are filled with emotions — excitement, surprises, and the warmth of family and friends. Hiring the best photographers in Bangalore means having a dedicated professional who anticipates these moments and captures them naturally, without disrupting the fun. Their experience with birthday events across Bangalore guarantees that no smile or special moment goes unnoticed.
+		</p>
+	  
+		  <h3>What Makes Our Birthday Photography the Best</h3>
+
+
+		  <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+			<img src="image/1703768147294.JPG" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+			<div>
+		  <h4>1. Personalized Attention</h4>
+		  <p>We take the time to understand the birthday person’s personality and preferences to make the photos truly special.	</p></div></div>
+	  
+
+		  <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+			<img src="image/1703768147308.JPG" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+			<div>
+		  <h4>2. Natural and Candid Shots</h4>
+		  <p>Rather than staged poses, we focus on capturing genuine moments filled with emotion and fun.</p></div></div>
+	  
+
+
+		  <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+			<img src="image/BJP06460.jpeg" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+			<div>
+		  <h4>3. Flexible Packages</h4>
+		  <p> Whether it’s a small family gathering or a large party, we offer customizable photography packages to fit your needs.</p></div></div>
+	  
+
+		  <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+			<img src="image/cheerful-friends-celebrating-new-year-party.jpg" alt="Conference" style="width: 150px; height: auto; margin-right: 15px;">
+			<div>
+		  <h4>4. Quick Turnaround</h4>
+		  <p>We know you’re excited to relive your celebration, so we deliver beautifully edited photos promptly.</p></div></div>
+	  
+		  <h3>Capturing Every Detail: From Decorations to Dance Floors		</h3>
+		  <p>Great birthday photography isn’t just about faces; it’s about atmosphere. The best photographers in Bangalore pay attention to the décor, the vibrant colors, the laughter-filled dance floor, and the small moments — like a child’s delighted expression on receiving a gift or the glow of candles on the cake.		</p>
+	  
+		  <h3>Ready to Capture Your Birthday Celebration?		</h3>
+		  <p>Our team of experienced birthday photographers in Bangalore is ready to make your special day unforgettable. Whether it’s a cozy family gathering or a large festive party, we bring creativity and professionalism to every shoot.</p>
+		  <p>Contact us today to discuss your birthday event, check availability, or get a custom quote. Let’s create memories that last a lifetime!</p>
+		</div>
+	  </div>
+
+
+
+
+
+
+
+
+
+
+
+  
+	  <div class="blog-card d-flex mb-5">
+		<div class="blog-image">
+		  <img src="image/young-pretty-woman-listening-music-wireless-earphones.jpg" alt="Fashion" class="img-fluid rounded">
+		</div>
+		<div class="blog-content text-white">
+		  <p class="text-uppercase text-muted small mb-2">Fashion</p>
+		  <h3 class="fw-bold mb-3">Create a Striking First Impression with Fashion & Portfolio Photography in Bangalore</h3>
+		  <p class="text-muted">In the competitive worlds of fashion, modeling, and entertainment, having a professional portfolio is essential...</p>
+		  <a href="#" class="btn btn-outline-dark mt-3" onclick="openBlogModal('blogModal5')">Read More</a>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+
+  <div id="blogModal5" class="blog-modal">
+	<div class="blog-modal-content dark-theme">
+	  <span class="close" onclick="closeBlogModal('blogModal5')">&times;</span>
+  
+	  <p style="font-size: 14px"></p>
+	<h2>Stand Out with Stunning Fashion and Portfolio Shoots by the Best Photographers in Bangalore
+	</h2>
+  
+	  <p>In the competitive worlds of fashion, modeling, and entertainment, having a professional portfolio is essential to make a lasting impression. Whether you’re an aspiring model, actor, influencer, or fashion designer, working with the best photographers in Bangalore can help you showcase your unique style and personality through high-quality, creative images.
+	</p>
+  
+	  <p>From candid laughter to heartfelt cake-cutting moments, professional event photography Bangalore experts know how to capture the essence of your birthday celebration with creativity and care. Every event is unique, and the right photographer helps tell your story in a way that feels personal and timeless.</p>
+  
+	  <h3>Why Professional Portfolio Photography Matters	</h3>
+	  <p>A well-crafted portfolio can be your ticket to casting calls, brand collaborations, and modeling contracts. Photographers who specialize in fashion and portfolio shoots understand lighting, angles, and styling that accentuate your best features and bring your vision to life. They work closely with you to create a collection of images that reflect your individuality and professional aspirations.
+	</p>
+  
+	 
+  
+	  <h3>Bringing Your Vision to Life with Every Click	</h3>
+	  <p>In a fashion and portfolio shoot, every detail matters — from the mood and style to the lighting and background. Our photographers work closely with you to translate your ideas into striking images that highlight your strengths and individuality. Whether you want bold and dramatic looks or soft and natural portraits, we tailor each session to fit your unique personality and career goals.
+	</p>
+
+	<h3>Elevate Your Career with Expert Photography in Bangalore	</h3>
+	<p>Whether you’re starting fresh or updating your portfolio, choosing the best photographers in Bangalore ensures you receive images that reflect professionalism and creativity. Our team is passionate about helping you achieve your goals with photos that make a statement.</p>
+  
+	  <h3>Ready to Create Your Stunning Portfolio?	</h3>
+
+	  <p>Contact us today to book your fashion or portfolio shoot. Let’s work together to capture images that truly represent you and open doors to new opportunities.</p>
+	</div>
+  </div>
+
+
+
+
+
+
+
+  
+  <style>
+	.blog-card {
+	  background-color: #fff;
+	  border-radius: 12px;
+	  overflow: hidden;
+	  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+	  gap: 20px;
+	  padding: 20px;
+	}
+	.blog-image img {
+	  width: 300px;
+	  height: auto;
+	  object-fit: cover;
+	}
+	.blog-content {
+	  flex: 1;
+	}
+  </style>
+  <!-- BLOG SECTION END -->
+  
+  
+			<!-- FOOTER -->
+			
+			<footer>
+				<div class="container">
+					<div class="footer-widgets">
+						<div class="row">
+							<div class="col-lg-3 col-sm-6">
+								<div class="foo-block">
+									<div class="widget_text widget widget-footer">
+										<h5 class="widgettitle">About Us</h5>
+										<div class="textwidget">
+											<p>Welcome to Photography in Bangalore, your one-stop destination for professional photoshoots and videography services. We specialize in bringing your visions to life through stunning imagery, whether it’s a model photoshoot, wedding, pre-wedding, corporate event, or brand shoot.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /col-lg-3 -->
+							<div class="col-lg-3 col-sm-6">
+								<div class="foo-block">
+									<div class="widget_text widget widget-footer">
+										<h5 class="widgettitle">Contact Us</h5>
+										<ul class="footer-contact">
+											<li><i class="fas fa-map-marker-alt"></i><span>#76 / 6, Chada Arcade, Sanjay Nagar Main Rd, Above Union Bank, Bengaluru, Karnataka 560094</span></li>
+										<li><i class="fas fa-mobile-alt"></i><span>(+91) 855 300 9696</span></li>
+										<li><i class="fas fa-mobile-alt"></i><span>(+91) 888 400 5400</span></li>
+										<li><i class="far fa-envelope"></i><span>careers@brightads.in</span></li>
+										<li><i class="far fa-envelope"></i><span>support@brightads.in
+										</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- /col-lg-3 -->
+							<div class="col-lg-3 col-sm-6">
+								<div class="foo-block">
+									<div class="widget_text widget widget-footer">
+										<h5 class="widgettitle">Quick Links</h5>
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="about-us-2.html">About</a></li>
+											<li><a href="portfolio-grid-v1-3-cols.html">Portfolio</a></li>
+											<li><a href="contact.html">Contact</a></li>
+											<li><a href="contact.html">Privacy Policy</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6">
+								<div class="foo-block foo-last">
+									<div class="widget widget-footer">
+										<h5 class="widgettitle">Follow</h5>
+										<ul>
+											<li><a href="https://www.facebook.com/profile.php?id=61574601167923"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+											<li><a href="https://www.instagram.com/photographers_in_bangalore/"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="copyright">
+						<div class="footer-copy"> <span class="footer-year">2025</span> &copy; Photographers In Banglore.</div>
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+			<div class="scrollup">
+				<a class="scrolltop" href="#">
+				<i class="fa fa-chevron-up"></i>
+				</a>
+			</div>
+			<!-- JS --> 
+			<script src='js/jquery.js'></script>
+			<script src='js/jquery-migrate.min.js'></script>
+			<script src='css/bootstrap/js/popper.min.js'></script>
+			<script src='css/bootstrap/js/bootstrap.min.js'></script>
+			<script src='js/jquery.easing.min.js'></script>
+			<script src='js/swiper.js'></script>
+			<script src='js/isotope.js'></script>
+			<script src='js/simple-lightbox.js'></script>
+			<!-- MAIN JS -->
+			<script src='js/init.js'></script>
+		</body>
+	</html>
+		<!-- FOOTER -->
+	

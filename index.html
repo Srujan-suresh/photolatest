@@ -1,0 +1,1238 @@
+<!DOCTYPE html> 
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilia - Elegant Photography Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' id='bootstrap-css' href='css/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+    <!-- Font Awesome Icons CSS -->
+    <link rel='stylesheet' id='font-awesome' href='css/fontawesome/css/font-awesome.min.css' type='text/css' media='all' />
+    <!-- Main CSS File -->
+    <link rel='stylesheet' id='tilia-style-css' href='style.css' type='text/css' media='all' />
+    <!-- favicons -->
+    <link rel="icon" href="images/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="images/icons/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="images/icons/favicon-180x180.png" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="home">
+    <!-- HEADER -->
+     <style>
+        .menu-nav {
+    gap: 20px;
+}
+
+.menu-nav li {
+    list-style: none;
+}
+
+.menu-nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+.header-social i {
+    font-size: 23px;
+}
+
+.header-social i:hover {
+    font-size: 27px;
+}
+
+/* Optional: Make sure items don't wrap on larger screens */
+@media (min-width: 992px) {
+    .main-header .container > div {
+        flex-wrap: nowrap;
+    }
+}
+.main-header .container > div {
+    margin-top: 30px; /* or more, like 30px if needed */
+    padding-top: 10px;
+}
+
+    </style>
+    <header class="main-header header-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3 flex-wrap">
+                <!-- Social Icons (Left) -->
+                <div class="header-social social-media d-flex align-items-center">
+                    <a href="https://www.facebook.com/profile.php?id=61574601167923" target="_blank" class="text-white me-3"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/photographers_in_banglore/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+    
+                <!-- Navigation Menu (Center) -->
+                <nav class="nav-holder nav-holder-5">
+                    <ul class="menu-nav d-flex justify-content-center align-items-center mb-0">
+                        <li class="menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="portfolio-grid-v1-3-cols.html">Portfolio</a></li>
+                        <li class="menu-item"><a href="gallery-grid-3-cols.html">Services</a></li>
+                        <li class="menu-item"><a href="pricing-plans.html">Pricing Plans</a></li>
+                        <li class="menu-item"><a href="blog.html">Blog</a></li>
+                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+    
+                <!-- Logo (Right) -->
+                <div class="logo logo-5 logo-white">
+                    <a href="index.html">
+                        <img class="img-fluid" src="image/LoGolatest.png" alt="PIB Logo" style="width: 140px; height: 75px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <!-- /HEADER -->
+</body>
+</html>
+
+
+
+
+<style>
+ 
+    .contact-popup-wrapper {
+       /* This block wraps everything inside this scope */
+   }
+   
+   /* Scoped styles using the wrapper */
+   .contact-popup-wrapper .contact-popup-overlay {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.6);
+       z-index: 9999;
+       display: none;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   .contact-popup-wrapper .contact-popup-content {
+       background-color: #fff;
+       border-radius: 10px;
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+       max-width: 500px;
+       width: 100%;
+       max-height: 85vh;
+       overflow-y: auto;
+       padding: 20px;
+       position: relative;
+       animation: fadeIn 0.3s ease-out;
+   }
+   
+   .contact-popup-wrapper input,
+.contact-popup-wrapper textarea,
+.contact-popup-wrapper select {
+width: 400px;
+font-size: 18px;
+padding: 14px 16px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 6px;
+box-sizing: border-box;
+}
+
+
+   .contact-popup-wrapper .popup-close-btn {
+       position: absolute;
+       top: 10px;
+       right: 10px;
+       background: transparent;
+       border: none;
+       font-size: 50px;
+       color: #333;
+       cursor: pointer;
+       z-index: 10000;
+   }
+   
+   .contact-popup-wrapper .popup-close-btn:hover {
+       color: #d9534f;
+   }
+   
+   .contact-popup-wrapper .contact-section {
+       background-color: #f8f9fa;
+       padding: 30px;
+       border-radius: 8px;
+   }
+   
+   .contact-popup-wrapper .contact-position-relative {
+       position: relative;
+       border-radius: 8px;
+   }
+   
+   .contact-popup-wrapper .contact-img-filter {
+       width: 100%;
+       height: auto;
+       border-radius: 8px;
+       filter: brightness(0.8);
+       transition: filter 0.3s ease;
+   }
+   
+   .contact-popup-wrapper .contact-img-filter:hover {
+       filter: brightness(1);
+   }
+   
+   .contact-popup-wrapper .overlay {
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background: rgba(0, 0, 0, 0.4);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: #fff;
+       font-size: 24px;
+       font-weight: bold;
+       border-radius: 8px;
+   }
+   
+   .contact-popup-wrapper h2,
+   .contact-popup-wrapper .heading {
+       font-size: 22px;
+       font-weight: 600;
+       margin-bottom: 15px;
+   }
+   
+   .contact-popup-wrapper .toast {
+       border-radius: 5px;
+       padding: 10px;
+       display: none;
+       margin-bottom: 15px;
+   }
+   
+   .contact-popup-wrapper .toast-body {
+       display: flex;
+       align-items: center;
+   }
+   
+   .contact-popup-wrapper .toast i {
+       margin-right: 10px;
+   }
+   
+   .contact-popup-wrapper .success_msg {
+       background-color: #d4edda;
+       border: 1px solid #c3e6cb;
+   }
+   
+   .contact-popup-wrapper .error_msg {
+       background-color: #f8d7da;
+       border: 1px solid #f5c6cb;
+   }
+   
+   .contact-popup-wrapper .toast .text-success {
+       color: #28a745;
+   }
+   
+   .contact-popup-wrapper .toast .text-danger {
+       color: #dc3545;
+   }
+   
+   .contact-popup-wrapper .contact-form {
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+   }
+   
+   .contact-popup-wrapper .contact-form-control {
+       border-radius: 8px;
+       padding: 15px;
+       font-size: 16px;
+       border: 1px solid #ccc;
+       transition: all 0.3s ease;
+   }
+   
+   .contact-popup-wrapper .contact-form-control:focus {
+       border-color: #007bff;
+       box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+   }
+   
+   .contact-popup-wrapper textarea {
+       resize: vertical;
+       height: 150px;
+   }
+   
+   .contact-popup-wrapper .contact-invalid-feedback {
+       color: #dc3545;
+       font-size: 14px;
+   }
+   
+   .contact-popup-wrapper .contact-submit-btn {
+       background-color: #fff;
+       color: #000;
+       font-size: 18px;
+       border: 2px solid #000;
+       padding: 15px;
+       border-radius: 8px;
+       cursor: pointer;
+       transition: all 0.3s ease;
+       font-weight: bold;
+   }
+   
+   .contact-popup-wrapper .contact-submit-btn:hover {
+       background-color: #ddd;
+   }
+   
+   .contact-popup-wrapper input[type="range"] {
+       width: 100%;
+       height: 6px;
+       border-radius: 5px;
+       background: #ddd;
+       outline: none;
+       margin-top: 10px;
+   }
+   
+   .contact-popup-wrapper input[type="range"]::-webkit-slider-thumb {
+       -webkit-appearance: none;
+       appearance: none;
+       width: 18px;
+       height: 18px;
+       background: #007bff;
+       border-radius: 50%;
+       cursor: pointer;
+       box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+   }
+   
+   .contact-popup-wrapper input[type="range"]::-moz-range-thumb {
+       width: 18px;
+       height: 18px;
+       background: #007bff;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+   
+   @keyframes fadeIn {
+       0% {
+           opacity: 0;
+           transform: scale(0.8);
+       }
+       100% {
+           opacity: 1;
+           transform: scale(1);
+       }
+   }
+   
+   @media (max-width: 768px) {
+       .contact-popup-wrapper .contact-popup-content {
+           width: 90%;
+           padding: 15px;
+       }
+   }
+
+   /* Style for the Success Popup */
+.success-popup {
+position: fixed;
+top: 20px;
+left: 50%;
+transform: translateX(-50%);
+background-color: #28a745;
+color: white;
+padding: 15px;
+border-radius: 5px;
+display: none; /* Hidden by default */
+z-index: 9999; /* Ensure it's above other content */
+font-size: 16px;
+max-width: 400px;
+width: 100%;
+}
+
+.success-popup button {
+background: transparent;
+border: none;
+color: white;
+font-size: 20px;
+position: absolute;
+top: 5px;
+right: 10px;
+cursor: pointer;
+}
+
+</style>        
+        
+   
+   
+<!-- Contact Popup Form -->
+<div class="contact-popup-wrapper">
+    <div id="contactPopup" class="contact-popup-overlay">
+        <div class="contact-popup-content animate-popup">
+            <button id="closeContactPopup" class="popup-close-btn">&times;</button>
+            <section class="contact-section bg-secondary-dark p-4">
+                <div class="r-container">
+                    <div class="row g-4">
+                        <div class="col-12 col-lg-12">
+                            <div class="contact-position-relative mb-3">
+                                <img src="image/contact.jpg" alt="" class="img-fluid contact-img-filter">
+                                <div class="overlay">
+                                    <h2 class="font-1 white">GET IN TOUCH</h2>
+                                </div>
+                            </div>
+                            <div class="text-start">
+                                <!-- Success and Error Messages -->
+                                <div id="successMessage" class="success_msg toast align-items-center w-100 shadow-none mb-3 bg-transparent border border-success rounded-0 my-4"
+                                    role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
+                                    <div class="d-flex p-2">
+                                        <div class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-success">
+                                            <i class="fa-solid fa-check f-36 text-success"></i>
+                                            Your Message Successfully Sent.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="errorMessage" class="error_msg toast align-items-center w-100 shadow-none border-danger mb-3 bg-transparent my-4 border rounded-0"
+                                    role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
+                                    <div class="d-flex p-2">
+                                        <div class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-danger">
+                                            <i class="fa-solid fa-triangle-exclamation f-36 text-danger"></i>
+                                            Something Went Wrong! Form Submission Failed.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Contact Form -->
+                                <form action="https://formsubmit.co/support@brightads.in" method="POST" id="contactForm" class="d-flex flex-column w-100 needs-validation mb-3 contact-form" novalidate>
+                                    <div class="row">
+                                        <!-- Name Input -->
+                                        <div class="col mb-3">
+                                            <input type="text" class="contact-form-control p-3" name="name" id="name" placeholder="Name" required>
+                                            <div class="contact-invalid-feedback"></div>
+                                        </div>
+
+                                        <!-- Email Input -->
+                                        <div class="col mb-3">
+                                            <input type="email" class="contact-form-control p-3" id="email" name="email" placeholder="Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- Event Name Input -->
+                                        <div class="col mb-3">
+                                            <input type="text" class="contact-form-control p-3" name="event_name" id="event_name" placeholder="Event Name" required>
+                                        </div>
+
+                                        <!-- Event Date Input -->
+                                        <div class="col mb-3">
+                                            <input type="date" class="contact-form-control p-3" name="event_date" id="event_date" placeholder="Event Date" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- Event Location Input -->
+                                    <div class="mb-3">
+                                        <input type="text" class="contact-form-control p-3" name="event_location" id="event_location" placeholder="Event Location" required>
+                                    </div>
+
+                                    <!-- Message Textarea -->
+                                    <div class="mb-3">
+                                        <textarea class="contact-form-control" id="message" name="message" rows="5" placeholder="Message"></textarea>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="mb-3 d-flex justify-content-center">
+                                        <button type="submit" class="contact-submit-btn font-2 w-100 py-3">
+                                            SUBMIT
+                                        </button>
+                                    </div>
+
+                                    <!-- Success Popup Message -->
+                                    <div id="successPopup" class="success-popup">
+                                        <span id="successPopupMessage">Thanks for submitting! You can contact 8884005400.</span>
+                                        <button id="closeSuccessPopup" class="close-btn">×</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    document.getElementById("contactForm").onsubmit = function(event) {
+        event.preventDefault();  // Prevent form submission to allow custom logic
+
+        fetch('https://formsubmit.co/support@brightads.in', {
+            method: 'POST',
+            body: new FormData(this)
+        })
+        .then(response => {
+            if (response.ok) {
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("contactForm").reset();
+            } else {
+                document.getElementById("errorMessage").style.display = "block";
+            }
+        })
+        .catch(() => {
+            document.getElementById("errorMessage").style.display = "block";
+        });
+    }
+
+function openContactPopup() {
+document.getElementById('contactPopup').style.display = 'flex';
+}
+
+function closeContactPopup() {
+document.getElementById('contactPopup').style.display = 'none';
+}
+
+// Attach close function to the close button
+document.getElementById('closeContactPopup').addEventListener('click', closeContactPopup);
+
+// Optional: Close popup when clicking outside the form
+window.addEventListener('click', function(event) {
+var popup = document.getElementById('contactPopup');
+if (event.target === popup) {
+    closeContactPopup();
+}
+});
+
+// Optional: Handle form submit with success popup (without backend)
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+e.preventDefault();
+
+// Show success message
+document.getElementById('successPopup').style.display = 'block';
+
+// Close popup after short delay
+setTimeout(() => {
+    document.getElementById('successPopup').style.display = 'none';
+    closeContactPopup();
+}, 3000);
+});
+
+// Manual close of success popup
+document.getElementById('closeSuccessPopup').addEventListener('click', function () {
+document.getElementById('successPopup').style.display = 'none';
+});
+</script>
+
+
+
+<style>
+	/* Positioning and styling the button */
+	.nav-toggle {
+		position: fixed;        /* or absolute if within a relatively positioned parent */
+		top: 10px;
+		right: 20px;
+		z-index: 1000;
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+	}
+	
+	/* Styling for the hamburger lines */
+	.hamburger-icon {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 30px;
+		height: 25px;
+	}
+	
+	.hamburger-icon .line {
+		height: 4px;
+		background-color: #fff;
+		border-radius: 2px;
+		transition: all 0.3s ease;
+	}
+	</style>
+	
+	<!-- Hamburger Button -->
+	<button class="nav-toggle d-md-none" aria-label="Toggle menu">
+		<div class="hamburger-icon">
+			<span class="line"></span>
+			<span class="line"></span>
+			<span class="line"></span>
+		</div>
+	</button>
+	
+			
+			
+			
+			
+
+			<!-- Mobile Nav -->
+  <div class="mobile-menu d-md-none" style="display: none; background: #111; color: white; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999;">
+    <div class="container py-4">
+      <button class="close-mobile text-white mb-4" style="font-size: 48px; position: absolute; top: 20px; right: 20px;">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul class="list-unstyled">
+        <li><a href="index.html" class="text-white d-block py-2">Home</a></li>
+        <li><a href="portfolio-grid-v1-3-cols.html" class="text-white d-block py-2">Portfolio</a></li>
+        <li><a href="gallery-grid-3-cols.html" class="text-white d-block py-2">Services</a></li>
+        <li><a href="pricing-plans.html" class="text-white d-block py-2">Pricing Plans</a></li>
+        <li><a href="blog.html" class="text-white d-block py-2">Blog</a></li>
+        <li><a href="contact.html" class="text-white d-block py-2">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navToggle = document.querySelector(".nav-toggle");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const closeBtn = document.querySelector(".close-mobile");
+
+      navToggle.addEventListener("click", () => {
+        mobileMenu.style.display = "block";
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.style.display = "none";
+      });
+
+      // Auto close menu when link clicked
+      document.querySelectorAll(".mobile-menu a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.style.display = "none";
+        });
+      });
+    });
+  </script>
+
+
+
+
+
+<style>
+.slider-text {
+    padding-top: 450px;
+}
+</style>
+<!-- HOME SLIDER -->
+<div class="swiper-mt">
+    <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide slider-img" style="background-image: url('image/BJP06460.jpeg');">
+            <div class="container slider-caption">
+                <div class="slider-text text-center" style="padding-top: 200px;">
+                    <h1 class="font-1 fw-semibold text-white lh-1 fs-large">
+                        <span>WEDDING PHOTOGRAPHY</span>
+                    </h1>
+                    <p class="text-white font-2 py-3">
+                        Photography is more than just a profession for us—it's our passion and creative expression. 
+                        With a keen eye for detail and a love for storytelling, We strive to capture moments that speak beyond words.
+                    </p>
+					<a href="#" class="read-more book-now-btn" onclick="openContactPopup()">Book Now</a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide slider-img" style="background-image: url('image/DSC02545-118\ \(1\)\ \(2\).jpg');">
+            <div class="container slider-caption">
+                <div class="slider-text text-center" style="padding-top: 200px;">
+                    <h1 class="font-1 fw-semibold text-white lh-1 fs-large">
+                        <span>CORPORATE PHOTOGRAPHY</span>
+                    </h1>
+                    <p class="text-white font-2 py-3">
+                        Photography is more than just a profession for us—it's our passion and creative expression. 
+                        With a keen eye for detail and a love for storytelling, We strive to capture moments that speak beyond words.
+                    </p>
+					<a href="#" class="read-more book-now-btn" onclick="openContactPopup()">Book Now</a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide slider-img" style="background-image: url('image/DSC01991.jpg');">
+            <div class="container slider-caption">
+                <div class="slider-text text-center" style="padding-top: 200px;">
+                    <h1 class="font-1 fw-semibold text-white lh-1 fs-large">
+                        <span>POTRAIT PHOTOGRAPHY</span>
+                    </h1>
+                    <p class="text-white font-2 py-3">
+                        Photography is more than just a profession for us—it's our passion and creative expression. 
+                        With a keen eye for detail and a love for storytelling, We strive to capture moments that speak beyond words.
+                    </p>
+					<a href="#" class="read-more book-now-btn" onclick="openContactPopup()">Book Now</a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+			<!-- /swiper-wrapper -->
+			<div class="swiper-mt-button-prev" tabindex="0" role="button" aria-label="Previous slide">
+				<svg version="1.1" class="arrow-slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve">
+					<path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
+						c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
+					<path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
+						S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
+				</svg>
+			</div>
+			<!-- /swiper-mt-button-prev -->
+			<div class="swiper-mt-button-next" tabindex="0" role="button" aria-label="Next slide">
+				<svg version="1.1" class="arrow-slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve">
+					<path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
+						c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
+					<path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
+						S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
+				</svg>
+			</div>
+			<!-- /swiper-mt-button-next -->
+		</div>
+		<!-- /swiper-mt -->
+		<!-- /HOME SLIDER -->
+		<!-- WRAP CONTENT -->
+		<div id="wrap-content" class="page-content custom-page-template">
+			<!-- SECTION 1 -->
+			<div id="home-section-1-1" class="section-holder home-section-1-1">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 margin-bm50">
+							<div class="el-smalltitle">Our Story</div>
+							<h5 class="display-4 margin-b30">Photographers in bangalore is a Wedding & Portrait Studio based in Bangalore</h5>
+							
+							<!-- /row -->
+						</div>
+						<!-- /col-lg-6 -->
+						<div class="col-lg-6">
+							<div class="margin-l50">
+								<p>Welcome to Photography in Bangalore, your one-stop destination for professional photoshoots and videography services. We specialize in bringing your visions to life through stunning imagery, whether it’s a model photoshoot, wedding, pre-wedding, corporate event, or brand shoot.</p>
+								<div class="row margin-t30">
+									<div class="col-md-6">
+										<ul class="list-circle">
+											<li>We love what we do</li>
+											<li>We are transparent</li>
+											<li>We listen to your needs</li>
+										</ul>
+									</div>
+									<!-- /col-md-6 -->
+									<div class="col-md-6">
+										<ul class="list-circle">
+											<li>We are respectful</li>
+											<li>We listen to your needs</li>
+											<li>We love what we do</li>
+										</ul>
+									</div>
+									<!-- /col-md-6 -->
+								</div>
+								<!-- /row -->
+							</div>
+							<!-- /margin-l50 -->
+						</div>
+						<!-- /col-lg-6 -->
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /SECTION 1 -->
+			<!-- SECTION 2 -->
+			<div id="home-section-1-2" class="section-holder home-section-1-2 parallax" style="background-image:url(image/sl_0210121_40570_43.jpg);">
+				<div class="row">
+			  
+				  <div class="col-md-6 col-lg-3">
+					<div class="text-center mobile-margin-b30">
+					  <div class="margin-b10" style="font-size: 40px;">💍</div>
+					  <h5 class="font-weight-normal white">Weddings</h5>
+					  <p>Capturing your special day with timeless elegance and emotion.</p>
+					</div>
+				  </div>
+			  
+				  <div class="col-md-6 col-lg-3">
+					<div class="text-center mobile-margin-b30">
+					  <div class="margin-b10" style="font-size: 40px;">🎥</div>
+					  <h5 class="font-weight-normal white">Videography</h5>
+					  <p>Cinematic moments that tell your unique story.</p>
+					</div>
+				  </div>
+			  
+				  <div class="col-md-6 col-lg-3">
+					<div class="text-center mobile-margin-b30">
+					  <div class="margin-b10" style="font-size: 40px;">📸</div>
+					  <h5 class="font-weight-normal white">Photography</h5>
+					  <p>Creative and heartfelt imagery for every occasion.</p>
+					</div>
+				  </div>
+			  
+				  <div class="col-md-6 col-lg-3">
+					<div class="text-center mobile-margin-b30">
+					  <div class="margin-b10" style="font-size: 40px;">🏡</div>
+					  <h5 class="font-weight-normal white">Family Events</h5>
+					  <p>Preserving memories of life’s most meaningful gatherings.</p>
+					</div>
+				  </div>
+			  
+				</div>
+			  </div>
+			  
+			  
+				  
+						
+						<!-- /col-md-6 -->
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /SECTION 2 -->
+			<!-- SECTION 3 -->
+			<div id="home-section-1-3" class="section-holder home-section-1-3">
+				<div class="container">
+					<div class="row align-items-center margin-b50">
+						<div class="col-lg-6 tablet-margin-b30">
+							<div class="el-smalltitle">Portfolio</div>
+							<h2 class="display-4">Selected Work</h2>
+						</div>
+						<!-- /col-lg-6 -->
+						<div class="col-lg-6">
+							<div class="el-align-right">
+								<a href="#" class="read-more">View All Work</a>
+							</div>
+						</div>
+						<!-- /col-lg-6 -->
+					</div>
+					<!-- /row -->
+
+					<style>/* Initially set the zoom to normal */
+						.post-image img {
+							transition: transform 0.3s ease-in-out; /* Smooth transition */
+						}
+						
+						/* On click, zoom in the image */
+						.zoomed {
+							transform: scale(1.2); /* Adjust scale to your liking */
+						}
+					
+
+
+						</style>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="portfolio-masonry-container">
+								<div class="portfolio-masonry portfolio-layout-masonry">
+									<div class="item-portfolio item-3cols wedding">
+										<div class="post-image item-grid-image"><img loading="lazy" src="image/a.png" class="img-fluid" alt=" "  width="750" height="500"> <a class="cursor-eye" href="#"> </a></div>
+										<div class="item-text-holder">
+											<h2 class="article-title display-6"><a href="#"></a></h2>
+											<ul class="portfolio-categ">
+												<li><a href="#"></a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- /item-portfolio -->
+									<div class="item-portfolio item-3cols wedding">
+										<div class="post-image item-grid-image"><img loading="lazy" src="image/a1.png" class="img-fluid" alt=" "  width="750" height="500"> <a class="cursor-eye" href="#"> </a></div>
+										<div class="item-text-holder">
+											<h2 class="article-title display-6"><a href="#"></a></h2>
+											<ul class="portfolio-categ">
+												<li><a href="#"></a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- /item-portfolio -->
+									<div class="item-portfolio item-3cols wedding">
+										<div class="post-image item-grid-image"><img loading="lazy" src="image/a2.png" class="img-fluid" alt=" "  width="750" height="500"> <a class="cursor-eye" href="#"> </a></div>
+										<div class="item-text-holder">
+											<h2 class="article-title display-6"><a href="#"></a></h2>
+											<ul class="portfolio-categ">
+												<li><a href="#"></a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- /item-portfolio -->
+									<div class="item-portfolio item-3cols wedding">
+										<div class="post-image item-grid-image"><img loading="lazy" src="image/BJP05942.jpeg" class="img-fluid" alt=" "  width="750" height="500"> <a class="cursor-eye" href="#"> </a></div>
+										<div class="item-text-holder">
+											<h2 class="article-title display-6"><a href="#"></a></h2>
+											<ul class="portfolio-categ">
+												<li><a href="#"></a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- /item-portfolio -->
+									<div class="item-portfolio item-3cols lifestyle wedding">
+										<div class="post-image item-grid-image"><img loading="lazy" src="image/BJP05656.jpeg" class="img-fluid" alt=" "  width="750" height="500"> <a class="cursor-eye" href="#"> </a></div>
+										<div class="item-text-holder"></a></h2>
+											<ul class="portfolio-categ">
+												<li><a href="#"></a></li>
+												<li><a href="#"></a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- /item-portfolio -->
+									<div class="item-portfolio item-3cols lifestyle wedding">
+										<div class="post-image item-grid-image"><img loading="lazy" src="image/DSC02023.jpg" class="img-fluid" alt=" "  width="750" height="500"> <a class="cursor-eye" href="#"> </a></div>
+										<div class="item-text-holder">
+											<h2 class="article-title display-6"><a href="#"></a></h2>
+											<ul class="portfolio-categ">
+												<li><a href="#"></a></li>
+												<li><a href="#"></a></li>
+											</ul>
+										</div>
+									</div>
+
+
+
+                                    <br>
+                                    <br>
+                                    <br>
+									<!-- /item-portfolio -->
+									<div class="item-portfolio item-3cols portrait">
+										<div class="post-image item-grid-image"><img loading="lazy" src="image/a6.png" class="img-fluid" alt=" "  width="750" height="500"> <a class="cursor-eye" href="#"> </a></div>
+										<div class="item-text-holder">
+											<h2 class="article-title display-6"><a href="#"></a></h2>
+											<ul class="portfolio-categ">
+												<li><a href="#"></a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- /item-portfolio -->
+									<div class="item-portfolio item-3cols lifestyle">
+										<div class="post-image item-grid-image"><img loading="lazy" src="image/a7.png" class="img-fluid" alt=" "  width="750" height="500"> <a class="cursor-eye" href="#"> </a></div>
+										<div class="item-text-holder">
+											<h2 class="article-title display-6"><a href="#"></a></h2>
+											<ul class="portfolio-categ">
+												<li><a href="#"></a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- /item-portfolio -->
+									<div class="item-portfolio item-3cols lifestyle portrait">
+										<div class="post-image item-grid-image"><img loading="lazy" src="image/a5.png" class="img-fluid" alt=" "  width="750" height="500"> <a class="cursor-eye" href="#"> </a></div>
+										<div class="item-text-holder">
+											<h2 class="article-title display-6"><a href="#"></a></h2>
+											<ul class="portfolio-categ">
+												<li><a href="#"></a></li>
+												<li><a href="#"></a></li>
+											</ul>
+										</div>
+									</div>
+									
+									<!-- /item-portfolio -->
+								</div>
+								<!-- /portfolio-masonry -->
+							</div>
+							<!-- /portfolio-masonry-container -->
+						</div>
+						<!-- /col-lg-12 -->
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<script>
+			// Reinitialize the layout after page load
+$(document).ready(function() {
+  // Example for Isotope:
+  var $grid = $('.portfolio-masonry').isotope({
+    // Isotope options
+    itemSelector: '.item-portfolio',
+    layoutMode: 'masonry'
+  });
+
+  // This ensures the layout recalculates after the page load
+  $grid.isotope('layout');
+});
+
+
+
+			
+			document.querySelectorAll('.post-image').forEach(item => {
+				item.addEventListener('click', function () {
+					const img = this.querySelector('img');
+					
+					// Add zoom effect
+					img.classList.add('zoomed');
+					
+					// After 2 seconds, remove the zoom effect
+					setTimeout(() => {
+						img.classList.remove('zoomed');
+					}, 2000);  // 2000 milliseconds (2 seconds)
+				});
+			});
+			</script>
+			<!-- /SECTION 3 -->	
+			<!-- SECTION 4 -->
+			<!-- New Testimonial Section -->
+<section class="testimonial-section" style="background-color: #f8f9fa; padding: 60px 0;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 style="font-weight: bold; font-size: 36px;">What Our Clients Say</h2>
+      <p style="font-size: 18px; color: #666;">Real stories from our happy clients</p>
+    </div>
+    <div class="row">
+
+      <!-- Testimonial 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow p-4 h-100 border-0">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client Photo" class="rounded-circle me-3" width="60" height="60">
+            <div>
+              <h5 class="mb-0">Joana Griffin</h5>
+              <small class="text-muted">Bride</small>
+            </div>
+          </div>
+          <p>"The team at Photographers in Bangalore truly exceeded our expectations! They captured every precious moment of our wedding with such creativity and attention to detail."</p>
+          <div class="text-warning">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow p-4 h-100 border-0">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Client Photo" class="rounded-circle me-3" width="60" height="60">
+            <div>
+              <h5 class="mb-0">Angela Ray</h5>
+              <small class="text-muted">Corporate Client</small>
+            </div>
+          </div>
+          <p>"I needed corporate headshots for my team, and Photographers in Bangalore made the whole process smooth and professional. They brought the studio setup to our office, and the results were clean, modern, and exactly what we needed for our website and LinkedIn."</p>
+          <div class="text-warning">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow p-4 h-100 border-0">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client Photo" class="rounded-circle me-3" width="60" height="60">
+            <div>
+              <h5 class="mb-0">Laura Foster</h5>
+              <small class="text-muted">Fashion Blogger</small>
+            </div>
+          </div>
+          <p>"As a fashion blogger, I’ve worked with many photographers, but none compare to the professionalism and vision of this studio."</p>
+          <div class="text-warning">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+			<!-- /SECTION 4 -->	
+			<!-- SECTION 5 -->
+			<!-- <div id="home-section-1-5" class="section-holder home-section-1-5">
+				<div class="container">
+					<div class="row align-items-center margin-b50">
+						<div class="col-lg-6">
+							<div class="el-smalltitle">Our Team</div>
+							<h2 class="display-4">The Creatives</h2>
+						</div>
+					</div>
+					<div class="row margin-b30less">
+						<div class="col-md-6 col-lg-3 margin-b30">
+							<div class="mt-img-scale margin-b15">
+								<a href="#"><img class="img-fluid radius10" src="images/team/team-1.jpg" alt=" " /></a>
+							</div>
+							<h5 class="margin-b10">James Paul</h5>
+							<div class="team-position">Founder</div>
+							<ul class="social-media social-team">
+								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+						<div class="col-md-6 col-lg-3 margin-b30">
+							<div class="mt-img-scale margin-b15">
+								<a href="#"><img class="img-fluid radius10" src="images/team/team-2.jpg" alt=" " /></a>
+							</div>
+							<h5 class="margin-b10">Manjunath</h5>
+							<div class="team-position">Founder</div>
+							<ul class="social-media social-team">
+								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+						<div class="col-md-6 col-lg-3 margin-b30">
+							<div class="mt-img-scale margin-b15">
+								<a href="#"><img class="img-fluid radius10" src="images/team/team-3.jpg" alt=" " /></a>
+							</div>
+							<h5 class="margin-b10">Selvendran</h5>
+							<div class="team-position">Founder</div>
+							<ul class="social-media social-team">
+								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+						<div class="col-md-6  col-lg-3 margin-b30">
+							<div class="mt-img-scale margin-b15">
+								<a href="#"><img class="img-fluid radius10" src="images/team/team-4.jpg" alt=" " /></a>
+							</div>
+							<h5 class="margin-b10">Jeremy Welch</h5>
+							<div class="team-position">Retoucher</div>
+							<ul class="social-media social-team">
+								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="home-section-1-6" class="section-holder home-section-1-6">
+				<div class="container">
+					<div class="row align-items-center margin-b30less">
+						<div class="col-6 col-md-3 alignc margin-b30">
+							<img class="img-fluid" src="images/home/logo-biz8.png" alt=" " width="150" />
+						</div>
+						<div class="col-6 col-md-3 alignc margin-b30">
+							<img class="img-fluid" src="images/home/logo-biz2.png" alt=" " width="150" />
+						</div>
+						<div class="col-6 col-md-3 alignc margin-b30">
+							<img class="img-fluid" src="images/home/logo-biz3.png" alt=" " width="150" />
+						</div>
+						<div class="col-6 col-md-3 alignc margin-b30">
+							<img class="img-fluid" src="images/home/logo-biz4.png" alt=" " width="150" />
+						</div>
+						<div class="col-6 col-md-3 alignc margin-b30">
+							<img class="img-fluid" src="images/home/logo-biz5.png" alt=" " width="150" />
+						</div>
+						<div class="col-6 col-md-3 alignc margin-b30">
+							<img class="img-fluid" src="images/home/logo-biz6.png" alt=" " width="150" />
+						</div>
+						<div class="col-6 col-md-3 alignc margin-b30">
+							<img class="img-fluid" src="images/home/logo-biz7.png" alt=" " width="150" />
+						</div>
+						<div class="col-6 col-md-3 alignc margin-b30">
+							<img class="img-fluid" src="images/home/logo-biz1.png" alt=" " width="150" />
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<!-- /SECTION 6 -->	
+			<!-- SECTION 7 -->
+			 <style>/* Add margin-top to the footer or content section after "Get in Touch" */
+				.footer-section {
+					margin-top: 100px; /* Adjust this value as needed */
+				}
+				
+				/* Alternatively, add padding-top to the section holder to create space */
+				.section-holder.home-section-1-7 {
+					padding-bottom: 100px; /* Adds space below "Get in Touch" section */
+				}
+				
+				/* Optional: If you want to add padding inside the footer content */
+				.footer-widgets {
+					padding-top: 100px; /* Adds padding inside the footer content */
+				}
+				</style>
+			<div id="home-section-1-7" class="section-holder home-section-1-7 section-nomargin parallax" style="background-image:url(image/sl_0210121_40570_43.jpg);">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="padding-lr200 alignc">
+								<div class="el-smalltitle white pcolor-white">Contact</div>
+								<h2 class="display-4 margin-b30">Looking for a photographer / videographer?</h2>
+								<p>Looking for a photographer or videographer in Bangalore? Whether it's a wedding, event, or brand shoot we've got the perfect match for your vision.</p>
+								<a href="contact.html" class="read-more margin-t30" >Get in Touch</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Now, below this section is the footer content -->
+			<div class="footer-section mt-5"> <!-- Add margin-top here -->
+				<div class="container">
+					<div class="footer-widgets">
+						<div class="row">
+							<div class="col-lg-3 col-sm-6">
+								<div class="foo-block">
+									<div class="widget_text widget widget-footer">
+										<h5 class="widgettitle">About Us</h5>
+										<div class="textwidget">
+											<p>Welcome to Photography in Bangalore, your one-stop destination for professional photoshoots and videography services. We specialize in bringing your visions to life through stunning imagery, whether it’s a model photoshoot, wedding, pre-wedding, corporate event, or brand shoot.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /col-lg-3 -->
+							<div class="col-lg-3 col-sm-6">
+								<div class="foo-block">
+									<div class="widget_text widget widget-footer">
+										<h5 class="widgettitle">Contact Us</h5>
+										<ul class="footer-contact">
+											<li><i class="fas fa-map-marker-alt"></i><span>#76 / 6, Chada Arcade, Sanjay Nagar Main Rd, Above Union Bank, Bengaluru, Karnataka 560094</span></li>
+											<li><i class="fas fa-mobile-alt"></i><span>(+91) 855 300 9696</span></li>
+											<li><i class="fas fa-mobile-alt"></i><span>(+91) 888 400 5400</span></li>
+											<li><i class="far fa-envelope"></i><span>careers@brightads.in</span></li>
+											<li><i class="far fa-envelope"></i><span>support@brightads.in</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- /col-lg-3 -->
+							<div class="col-lg-3 col-sm-6">
+								<div class="foo-block">
+									<div class="widget_text widget widget-footer">
+										<h5 class="widgettitle">Quick Links</h5>
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="about-us-2.html">About</a></li>
+											<li><a href="portfolio-grid-v1-3-cols.html">Portfolio</a></li>
+											<li><a href="contact.html">Contact</a></li>
+											<li><a href="privacy-policy.html">Privacy Policy</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- /col-lg-3 -->
+							<div class="col-lg-3 col-sm-6">
+								<div class="foo-block foo-last">
+									<div class="widget widget-footer">
+										<h5 class="widgettitle">Follow</h5>
+										<ul>
+									
+											<li><a href="https://www.facebook.com/profile.php?id=61574601167923"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                                    <li><a href="https://www.instagram.com/photographers_in_bangalore/"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- /col-lg-3 -->
+						</div>
+					</div>
+					<div class="copyright">
+						<div class="footer-copy"> <span class="footer-year">2025</span> &copy; Photographers In Bangalore.</div>
+					</div>
+				</div>
+			</div>
+			
+		<div class="scrollup">
+			<a class="scrolltop" href="#">
+			<i class="fa fa-chevron-up"></i>
+			</a>
+		</div>
+		<!-- JS --> 
+		<script src='js/jquery.js'></script>
+		<script src='js/jquery-migrate.min.js'></script>
+		<script src='css/bootstrap/js/popper.min.js'></script>
+		<script src='css/bootstrap/js/bootstrap.min.js'></script>
+		<script src='js/jquery.easing.min.js'></script>
+		<script src='js/swiper.js'></script>
+		<script src='js/isotope.js'></script>
+		<script src='js/simple-lightbox.js'></script>
+		<!-- MAIN JS -->
+		<script src='js/init.js'></script>
+	</body>
+</html>

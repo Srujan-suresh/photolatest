@@ -1,0 +1,354 @@
+<!DOCTYPE html> 
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilia - Elegant Photography Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' id='bootstrap-css' href='css/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+    <!-- Font Awesome Icons CSS -->
+    <link rel='stylesheet' id='font-awesome' href='css/fontawesome/css/font-awesome.min.css' type='text/css' media='all' />
+    <!-- Main CSS File -->
+    <link rel='stylesheet' id='tilia-style-css' href='style.css' type='text/css' media='all' />
+    <!-- favicons -->
+    <link rel="icon" href="images/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="images/icons/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="images/icons/favicon-180x180.png" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="home">
+    <!-- HEADER -->
+     <style>
+        .menu-nav {
+    gap: 20px;
+}
+
+.menu-nav li {
+    list-style: none;
+}
+
+.menu-nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+.header-social i {
+    font-size: 23px;
+}
+
+.header-social i:hover {
+    font-size: 27px;
+}
+
+/* Optional: Make sure items don't wrap on larger screens */
+@media (min-width: 992px) {
+    .main-header .container > div {
+        flex-wrap: nowrap;
+    }
+}
+.main-header .container > div {
+    margin-top: 30px; /* or more, like 30px if needed */
+    padding-top: 10px;
+}
+
+    </style>
+    <header class="main-header header-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3 flex-wrap">
+                <!-- Social Icons (Left) -->
+                <div class="header-social social-media d-flex align-items-center">
+                    <a href="https://www.facebook.com/profile.php?id=61574601167923" target="_blank" class="text-white me-3"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/photographers_in_banglore/" target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+    
+                <!-- Navigation Menu (Center) -->
+                <nav class="nav-holder nav-holder-5">
+                    <ul class="menu-nav d-flex justify-content-center align-items-center mb-0">
+                        <li class="menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="portfolio-grid-v1-3-cols.html">Portfolio</a></li>
+                        <li class="menu-item"><a href="gallery-grid-3-cols.html">Services</a></li>
+                        <li class="menu-item"><a href="pricing-plans.html">Pricing Plans</a></li>
+                        <li class="menu-item"><a href="blog.html">Blog</a></li>
+                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+    
+                <!-- Logo (Right) -->
+                <div class="logo logo-5 logo-white">
+                    <a href="index.html">
+                        <img class="img-fluid" src="image/LoGolatest.png" alt="PIB Logo" style="width: 140px; height: 75px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <!-- /HEADER -->
+</body>
+</html>
+<style>
+	/* Positioning and styling the button */
+	.nav-toggle {
+		position: fixed;        /* or absolute if within a relatively positioned parent */
+		top: 10px;
+		right: 20px;
+		z-index: 1000;
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+	}
+	
+	/* Styling for the hamburger lines */
+	.hamburger-icon {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 30px;
+		height: 25px;
+	}
+	
+	.hamburger-icon .line {
+		height: 4px;
+		background-color: #fff;
+		border-radius: 2px;
+		transition: all 0.3s ease;
+	}
+	</style>
+	
+	<!-- Hamburger Button -->
+	<button class="nav-toggle d-md-none" aria-label="Toggle menu">
+		<div class="hamburger-icon">
+			<span class="line"></span>
+			<span class="line"></span>
+			<span class="line"></span>
+		</div>
+	</button>
+
+
+
+
+<!-- Mobile Nav -->
+<div class="mobile-menu d-md-none" style="display: none; background: #111; color: white; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999;">
+<div class="container py-4">
+<button class="close-mobile text-white mb-4" style="font-size: 48px; position: absolute; top: 20px; right: 20px;">
+<i class="fas fa-times"></i>
+</button>
+<ul class="list-unstyled">
+<li><a href="index.html" class="text-white d-block py-2">Home</a></li>
+<li><a href="portfolio-grid-v1-3-cols.html" class="text-white d-block py-2">Portfolio</a></li>
+<li><a href="gallery-grid-3-cols.html" class="text-white d-block py-2">Services</a></li>
+<li><a href="pricing-plans.html" class="text-white d-block py-2">Pricing Plans</a></li>
+<li><a href="blog.html" class="text-white d-block py-2">Blog</a></li>
+<li><a href="contact.html" class="text-white d-block py-2">Contact</a></li>
+</ul>
+</div>
+</div>
+
+<!-- JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const navToggle = document.querySelector(".nav-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeBtn = document.querySelector(".close-mobile");
+
+navToggle.addEventListener("click", () => {
+mobileMenu.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+mobileMenu.style.display = "none";
+});
+
+// Auto close menu when link clicked
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+link.addEventListener("click", () => {
+mobileMenu.style.display = "none";
+});
+});
+});
+</script>
+		<!-- /HEADER -->
+		<!-- TOP HEADER IMAGE -->
+		<div class="top-single-bkg topsinglepage">
+			<div class="topsingleimg"> <img src="image/DSC02023.jpg" alt="" width="1920" height="1080"></div>
+			<div class="inner-desc">
+				<div class="container">
+					<h1 class="display-2 single-post-title"> Contact</h1>
+					<span class="post-subtitle"> We're here to catch your event</span>
+				</div>
+			</div>
+		</div>
+		<!-- /TOP HEADER IMAGE -->
+		<!-- WRAP CONTENT -->
+		<div id="wrap-content" class="page-content custom-page-template">
+			<!-- SECTION 1 -->
+			<div id="contact-1-1" class="section-holder contact-1-1">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 margin-bm50">
+							<div class="margin-r50">
+								<h2 class="display-4">We're Ready to Work with You. Get in Touch</h2>
+							</div>
+						</div>
+						<!-- /col-lg-6 -->
+						<div class="col-lg-6">
+							<div class="row">
+								<div class="col-md-6">
+									<h5 class="widgettitle">Main Office</h5>
+									<p>#76 / 6, Chada Arcade, Sanjay Nagar Main Rd, Above Union Bank, Bengaluru, Karnataka 560094</p>
+								</div>
+								<!-- /col-md-6 -->
+								<div class="col-md-6">
+									<h5 class="widgettitle">Social</h5>
+									<ul class="social-media social-list">
+										<li><a class="social-facebook" href="https://www.facebook.com/profile.php?id=61574601167923" target="_blank">Facebook</a></li>
+										
+										<li><a class="social-instagram" href="https://www.instagram.com/photographers_in_banglore/" target="_blank">Instagram</a></li>
+									</ul>
+								</div>
+								<!-- /col-md-6 -->
+							</div>
+							<!-- /row -->	
+						</div>
+						<!-- /col-lg-6 -->
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /SECTION 1 -->
+			<!-- SECTION 2 -->
+			<div id="contact-1-2" class="contact-1-2">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 order-mobi2">
+							<div class="margin-r50">
+								<div class="gmaps">
+									<iframe loading="lazy" class="maps"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.092980817848!2d77.57841119999999!3d13.0297506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae173a3744f0ab%3A0xa4be503e09b37e55!2sBright%20Ads%20Digital%20Marketing%20Agency%20Bangalore%20%7C%20SEO%20Agency%20%7C%20Website%20Development!5e0!3m2!1sen!2sin!4v1744701758125!5m2!1sen!2sin"
+                        title="London Eye, London, United Kingdom"
+                        aria-label="London Eye, London, United Kingdom"></iframe>
+								</div>
+							</div>
+						</div>
+						<!-- /col-lg-6 -->
+						<div class="col-lg-6 order-mobi1 margin-bm50">
+							<div id="contact-form-holder">
+								<form method="post" id="contact-form" action='include/contact-process.php'>
+									<div class="margin-b30"><input type="text" name="name" class="comm-field" placeholder="Name" /></div>
+									<div class="margin-b30"><input type="text" name="email" class="comm-field" placeholder="Email" /> </div>
+									<div class="margin-b30"><input type="text" name="phone" class="comm-field" placeholder="Phone" /> </div>
+									<div class="margin-b30"><textarea name="message" id="msg-contact" rows="5" placeholder="Message"></textarea></div>
+									<p class="antispam">Leave this empty: <input type="text" name="url" /></p>
+									<p><input type="submit" value="Send message" class="submit"/></p>
+								</form>
+							</div>
+							<!-- contact-form-holder-->
+							<div id="output-contact"></div>
+						</div>
+						<!-- /col-lg-6 -->
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /SECTION 2 -->
+		</div>
+		<!-- /WRAP CONTENT -->
+		<!-- FOOTER -->
+	
+		<footer>
+			<div class="container">
+				<div class="footer-widgets">
+					<div class="row">
+						<div class="col-lg-3 col-sm-6">
+							<div class="foo-block">
+								<div class="widget_text widget widget-footer">
+									<h5 class="widgettitle">About Us</h5>
+									<div class="textwidget">
+										<p>Welcome to Photography in Bangalore, your one-stop destination for professional photoshoots and videography services. We specialize in bringing your visions to life through stunning imagery, whether it’s a model photoshoot, wedding, pre-wedding, corporate event, or brand shoot.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /col-lg-3 -->
+						<div class="col-lg-3 col-sm-6">
+							<div class="foo-block">
+								<div class="widget_text widget widget-footer">
+									<h5 class="widgettitle">Contact Us</h5>
+									<ul class="footer-contact">
+										<li><i class="fas fa-map-marker-alt"></i><span>#76 / 6, Chada Arcade, Sanjay Nagar Main Rd, Above Union Bank, Bengaluru, Karnataka 560094</span></li>
+										<li><i class="fas fa-mobile-alt"></i><span>(+91) 855 300 9696</span></li>
+										<li><i class="fas fa-mobile-alt"></i><span>(+91) 888 400 5400</span></li>
+										<li><i class="far fa-envelope"></i><span>careers@brightads.in</span></li>
+										<li><i class="far fa-envelope"></i><span>support@brightads.in
+										</span></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- /col-lg-3 -->
+						<div class="col-lg-3 col-sm-6">
+							<div class="foo-block">
+								<div class="widget_text widget widget-footer">
+									<h5 class="widgettitle">Quick Links</h5>
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about-us-2.html">About</a></li>
+										<li><a href="portfolio-grid-v1-3-cols.html">Portfolio</a></li>
+										<li><a href="contact.html">Contact</a></li>
+										<li><a href="contact.html">Privacy Policy</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<div class="foo-block foo-last">
+								<div class="widget widget-footer">
+									<h5 class="widgettitle">Follow</h5>
+									<ul>
+										<li><a href="https://www.facebook.com/profile.php?id=61574601167923"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+										<li><a href="https://www.instagram.com/photographers_in_bangalore/"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="copyright">
+					<div class="footer-copy"> <span class="footer-year">2025</span> &copy; Photographers In Banglore.</div>
+				</div>
+			</div>
+		</footer>
+		<!-- /FOOTER -->
+		<div class="scrollup">
+			<a class="scrolltop" href="#">
+			<i class="fa fa-chevron-up"></i>
+			</a>
+		</div>
+		<!-- JS --> 
+		<script src='js/jquery.js'></script>
+		<script src='js/jquery-migrate.min.js'></script>
+		<script src='css/bootstrap/js/popper.min.js'></script>
+		<script src='css/bootstrap/js/bootstrap.min.js'></script>
+		<script src='js/jquery.easing.min.js'></script>
+		<script src='js/swiper.js'></script>
+		<script src='js/isotope.js'></script>
+		<script src='js/simple-lightbox.js'></script>
+		<!-- MAIN JS -->
+		<script src='js/init.js'></script>
+		<!-- CONTACT FORM JS -->
+		<script src='js/jquery.form.min.js'></script>
+		<script src='js/contactform.js'></script>
+	</body>
+</html>
